@@ -1,0 +1,25 @@
+.container {
+    width: 70%;
+    height: 80%;
+    background-color: white;
+    border-radius: 20px;
+    border: 1px solid ;
+    padding: 48px 48px 64px 48px;
+    position: relative;
+}
+
+ion-fab {
+    margin-bottom: -40px;
+}
+
+#next {
+    margin-right: 20px;
+}
+
+#clean {
+    margin-right: 90px;
+}
+
+#counter {
+    margin-left: 20px;
+}

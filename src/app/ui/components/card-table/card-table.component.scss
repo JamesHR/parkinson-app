@@ -1,0 +1,14 @@
+ion-card {
+    height: 100%;
+}
+
+#header_list {
+    position: sticky;
+    top: 0;
+}
+
+#header_list ion-grid {
+    width: 100%;
+    padding: 4px 16px 4px 16px;
+    font-size: small;
+}

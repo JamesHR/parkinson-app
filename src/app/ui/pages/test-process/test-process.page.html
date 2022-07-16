@@ -1,0 +1,41 @@
+<app-header [isLogged]="true"></app-header>
+
+<ion-content>
+  <div class="container-center">
+    <div class="container ion-text-center">
+      <ion-label class="ion-text-center ion-no-padding">
+				<h1><strong>EJERCICIOS DE MANO ALZADA</strong></h1>
+        <p>A continuación, realice los trazos que se muestan en pantalla</p>
+        <p>al finalizar, pulse el botón siguiente para continuar con la prueba</p>
+			</ion-label>
+      <br><br>
+
+      <ion-label>
+        <p><small>[Lienzo {{counter}}]</small></p>
+      </ion-label>
+      <br><br>
+
+      <ion-fab id="next" vertical="bottom" horizontal="end" slot="fixed" (click)="(counter < 3) ? onIncrement() : onSubmit()">
+        <ion-fab-button>
+          <ion-icon [name]="(counter < 3) ? 'chevron-forward' : 'checkmark'"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+
+      <ion-fab id="clean" vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button color="light">
+          <ion-icon name="trash"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+
+      <ion-fab id="counter" vertical="bottom" horizontal="start" slot="fixed">
+        <ion-fab-button color="light">
+          {{counter}}/3
+        </ion-fab-button>
+      </ion-fab>
+
+    </div>
+    
+  </div>
+</ion-content>
+
+

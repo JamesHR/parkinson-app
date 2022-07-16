@@ -1,0 +1,15 @@
+#secondary {
+    border-top: 1px black solid;
+    width: fit-content;
+}
+
+#user {
+    margin: 8px;
+    border: 1px black solid;
+    border-radius: 8px;
+}
+
+ion-toolbar {
+    --background: var(--color-background-app);
+    padding: 24px 24px 0 24px;
+}

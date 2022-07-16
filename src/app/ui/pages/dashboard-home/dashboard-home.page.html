@@ -1,0 +1,65 @@
+<div class="container_dashboard-main backgound_color" slot="fixed">
+  <div class="container_dashboard-menu">
+    <app-menu activeOption="Inicio"></app-menu>
+  </div>
+  <div class="container_dashboard-header">
+    <app-header-dashboard title="Panel principal"></app-header-dashboard>
+  </div>
+  <div class="container_dashboard-info">
+    <app-card-info
+      icon="id-card"
+      textPrimary="Fulanito Perez"
+      textSecondary="TecNM Instituto Tecnológico de Orizaba"
+      textTertiary="47 años"
+    ></app-card-info>
+  </div>
+  <div class="container_dashboard-data1">
+    <app-card-data
+      icon="layers"
+      textPrimary="Pruebas realizadas"
+      textSecondary="7"
+    ></app-card-data>
+  </div>
+  <div class="container_dashboard-data2">
+    <app-card-data
+      icon="pulse"
+      textPrimary="Probabilidad global"
+      textSecondary="72%"
+    ></app-card-data>
+  </div>
+  <div class="container_dashboard-graph">
+    <app-card-graph
+      title="Porcentaje de probabilidad"
+      filter="2022"
+    ></app-card-graph>
+  </div>
+  <div class="container_dashboard-graph_small">
+    <app-card-graph-small
+      title="Resultados"
+      [value1]="5"
+      [value2]="2"
+    ></app-card-graph-small>
+  </div>
+  <div class="container_dashboard-table">
+    <app-card-table
+      title="Historial de pruebas"
+      filter="2022"
+      [headers]="[
+        {'size': 2,'value': 'Fecha'},
+        {'size': 6,'value': 'Prueba'},
+        {'size': 2,'value': 'Probabilidad'},
+        {'size': 2,'value': 'Tiempo'},
+      ]"
+      [data]="[
+        {'Fecha': '30/06/2022', 'Prueba': 'Prueba de Mano alzada', 'Probabilidad': '53.22%', 'Tiempo': '5m 42s'},
+        {'Fecha': '15/06/2022', 'Prueba': 'Prueba de Mano alzada', 'Probabilidad': '51.70%', 'Tiempo': '4m 12s'},
+        {'Fecha': '30/05/2022', 'Prueba': 'Prueba de Mano alzada', 'Probabilidad': '32.82%', 'Tiempo': '4m 37s'},
+        {'Fecha': '15/05/2022', 'Prueba': 'Prueba de Mano alzada', 'Probabilidad': '51.00%', 'Tiempo': '5m 12s'},
+        {'Fecha': '30/04/2022', 'Prueba': 'Prueba de Mano alzada', 'Probabilidad': '47.02%', 'Tiempo': '6m 07s'},
+        {'Fecha': '15/04/2022', 'Prueba': 'Prueba de Mano alzada', 'Probabilidad': '39.75%', 'Tiempo': '5m 22s'},
+        {'Fecha': '30/03/2022', 'Prueba': 'Prueba de Mano alzada', 'Probabilidad': '23.12%', 'Tiempo': '4m 52s'},
+
+      ]"
+    ></app-card-table>
+  </div>
+</div>

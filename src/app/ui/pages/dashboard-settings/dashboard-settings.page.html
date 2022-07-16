@@ -1,0 +1,117 @@
+<div class="container_dashboard-main backgound_color" slot="fixed">
+  <div class="container_dashboard-menu">
+    <app-menu activeOption="Configuraciones"></app-menu>
+  </div>
+  <div class="container_dashboard-header">
+    <app-header-dashboard title="Configuraciones"></app-header-dashboard>
+  </div>
+
+  <div class="container_dashboard-body">
+
+    <ion-card mode="ios" class="card_dasboard ion-padding">
+
+      <form>
+        <ion-item-divider mode="md">
+          <ion-label color="dark">Datos del paciente</ion-label>
+        </ion-item-divider>
+
+        <ion-grid fixed>
+          <ion-row>
+            <ion-col size="4">
+              <ion-item lines="none">
+                <ion-label position="stacked">Nombre</ion-label>
+                <ion-input name="txtNombre"></ion-input>
+              </ion-item>
+            </ion-col>
+            <ion-col size="4">
+              <ion-item lines="none">
+                <ion-label position="stacked">Apellido Paterno</ion-label>
+                <ion-input name="txtNombre"></ion-input>
+              </ion-item>
+            </ion-col>
+            <ion-col size="4">
+              <ion-item lines="none">
+                <ion-label position="stacked">Apellido Materno <small>(opcional)</small></ion-label>
+                <ion-input name="txtNombre"></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="4">
+              <ion-item lines="none">
+                <ion-label position="stacked">Fecha de nacimiento</ion-label>
+                <ion-input name="txtNombre" type="date"></ion-input>
+              </ion-item>
+            </ion-col>
+            <ion-col size="8">
+              <ion-item lines="none">
+                <ion-label position="stacked">Institución médica</ion-label>
+                <ion-input name="txtNombre"></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+
+        <ion-item-divider mode="md">
+          <ion-label color="dark">Datos de contacto</ion-label>
+        </ion-item-divider>
+
+        <ion-grid fixed>
+          <ion-row>
+            <ion-col size="4">
+              <ion-item lines="none">
+                <ion-label position="stacked">Correo electrónico</ion-label>
+                <ion-input name="txtNombre"></ion-input>
+              </ion-item>
+            </ion-col>
+            <ion-col size="4">
+              <ion-item lines="none">
+                <ion-label position="stacked">Teléfono</ion-label>
+                <ion-input name="txtNombre"></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+        <ion-item-divider mode="md">
+          <ion-label color="dark">Preferencias de idioma</ion-label>
+        </ion-item-divider>
+
+        <ion-grid fixed>
+          <ion-row>
+            <ion-col size="4">
+              
+                <ion-item lines="none">
+                  <ion-select interface="popover" placeholder="Seleccione una opción" value="ES-MX">
+                    <ion-select-option value="ES-MX">Español (México)</ion-select-option>
+                    <ion-select-option value="EN-US">English</ion-select-option>
+                  </ion-select>
+                </ion-item>
+              
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+        <ion-item-divider mode="md">
+          <ion-label color="dark">Contraseña</ion-label>
+        </ion-item-divider>
+
+        <ion-grid fixed>
+          <ion-row>
+            <ion-col size="4">
+              <ion-button expand="block" fill="outline" mode="ios" size="small">Cambiar contraseña</ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+        <div id="submit_buttons">
+          <ion-button expand="block" fill="outline" mode="ios" size="small">Cancelar</ion-button>
+          <ion-button expand="block" mode="ios" size="small" (click)="presentAlert()">Guardar</ion-button>
+        </div>
+
+
+      </form>
+    </ion-card>
+  </div>
+</div>

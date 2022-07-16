@@ -1,0 +1,25 @@
+<app-header [isLogged]="true"></app-header>
+
+<ion-content>
+  <div class="container-center">
+    <div class="container ion-text-center">
+      <ion-label class="ion-text-center ion-no-padding">
+				<h1><strong>PRUEBA FINALIZADA<br>CORRECTAMENTE</strong></h1>
+			</ion-label>
+      <br><br>
+
+      <ion-label>
+        <p><small>Folio:</small></p>
+        <h1><strong>{{folio}}</strong></h1>
+        <p>Prueba de mano alzada</p>
+      </ion-label>
+      <br><br>
+      
+      <ion-button expand="block" mode="ios" fill="outline" routerLink="/dashboard-history">Ver mis resultados</ion-button>
+      <ion-button expand="block" mode="ios" routerLink="/dashboard-home">Volver al inicio</ion-button>
+      
+    </div>      
+  </div>
+</ion-content>
+
+

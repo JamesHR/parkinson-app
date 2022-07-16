@@ -1,0 +1,25 @@
+<app-header></app-header>
+
+<ion-content class="backgound_color">
+  <div class="container-center">
+    <form>
+      <ion-label class="ion-text-center ion-no-padding">
+				<h1><strong>BIENVENIDO</strong></h1>
+				<p>Ingrese su usuario y contraseña para iniciar sesión</p>
+			</ion-label>
+      <br><br>
+      <ion-item>
+        <ion-label position="floating">Usuario</ion-label>
+        <ion-input name="txtUsuario" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input name="txtPassword" type="password" required></ion-input>
+      </ion-item>
+      <p class="ion-text-center"><small><a href="#">¿Problemas para iniciar sesión?</a></small></p>
+      <ion-button expand="block" mode="ios" routerLink="/dashboard-home">Ingresar</ion-button>
+      <br><br>
+      <p class="ion-text-center"><small>¿No tiene una cuenta? <a href="#">Registrarse</a></small></p>
+    </form>
+  </div>
+</ion-content>

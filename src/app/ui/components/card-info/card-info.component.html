@@ -1,0 +1,15 @@
+<ion-card mode="ios" class="card_dasboard">
+  
+  <div *ngIf="flag" class="flag">
+    <p><strong>{{flag}}</strong></p>
+  </div>
+
+  <ion-item lines="none">
+    <ion-icon [name]="icon" slot="start"></ion-icon>
+    <ion-label class="ion-text-left">
+      <h3><strong>{{textPrimary}}</strong></h3>
+      <h6>{{textSecondary}}</h6>
+      <p><small>{{textTertiary}}</small></p>
+    </ion-label>
+  </ion-item>
+</ion-card>

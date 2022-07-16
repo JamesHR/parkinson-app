@@ -1,0 +1,42 @@
+<app-header [isLogged]="true"></app-header>
+
+<ion-content>
+  <div class="container-center">
+    <div class="container">
+      <ion-label class="ion-text-center ion-no-padding">
+				<h1><strong>INICIO DE LA PRUEBA</strong></h1>
+				<p>A continuación, seleccione el tipo de prueba a realizar</p>
+			</ion-label>
+      <br><br>
+
+      <ion-item class="container_column" lines="none">
+        <ion-card-content class="container_column_item" routerLink="/test-process">
+          <ion-icon name="mic"></ion-icon>
+          Voz
+        </ion-card-content>
+        
+        <ion-card-content class="container_column_item" routerLink="/test-process">
+          <ion-icon name="pencil"></ion-icon>
+          Mano alzada
+        </ion-card-content>
+
+        <ion-card-content class="container_column_item" routerLink="/test-process">
+          <ion-icon name="walk"></ion-icon>
+          Movimiento
+        </ion-card-content>
+      </ion-item>
+      <br><br>
+
+      <ion-button expand="block" mode="ios" routerLink="/dashboard-home">Volver al inicio</ion-button>
+      <br><br>
+
+      <p class="ion-text-center">
+        <small>Al continuar, acepta los <a href="#">términos y políticas de privacidad</a>
+          <br>sobre el uso de esta aplicación
+        </small>
+      </p>
+      
+    </div>      
+  </div>
+</ion-content>
+

@@ -1,0 +1,17 @@
+<ion-toolbar>
+  <ion-label slot="start">
+    <h1><strong>PARKINSON APP</strong></h1>
+    <p id="secondary"><small>Tecnm Instituto Tecnológico de Orizaba</small></p>
+  </ion-label>
+
+  <ion-buttons slot="end">
+    <ion-button color="dark">
+      <ion-icon name="globe" size="small"></ion-icon>
+      <p><small>&nbsp; ES</small></p>
+    </ion-button>
+    <ion-button *ngIf="isLogged" color="dark" id="user">
+      <ion-icon slot="end" name="person-circle"></ion-icon>
+      <p><small>&nbsp;Fulanito Pérez</small></p>
+    </ion-button>
+  </ion-buttons>
+</ion-toolbar>

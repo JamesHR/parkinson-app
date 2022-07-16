@@ -1,0 +1,17 @@
+ion-card {
+    height: 100px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+ion-item {
+    width: 100%;
+}
+
+ion-icon {
+    background-color: var(--ion-color-warning);
+    border-radius: 100%;
+    padding: 8px;
+    font-size: 48px;
+}
