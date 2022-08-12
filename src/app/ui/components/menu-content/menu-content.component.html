@@ -1,0 +1,24 @@
+<ion-card>
+  <ion-item-divider>
+    <ion-label color="dark">
+      <h2><strong>Parkinson App</strong></h2>
+    </ion-label>
+  </ion-item-divider>
+
+  <ion-button expand="block" mode="ios" class="ion-margin" size="small" routerLink="/test-catalog">
+    Realizar prueba
+    <ion-icon slot="end" name="add"></ion-icon>
+  </ion-button>
+
+  <div>
+    <ion-item *ngFor="let item of menu" button lines="none" [routerLink]="item.path">
+      <ion-icon [name]="item.icon" slot="start" class="ion-no-margin" [color]="(item.isActive ? 'primary' : 'medium')"></ion-icon>
+      <ion-label class="ion-margin" [color]="(item.isActive ? 'primary' : 'medium')">{{item.value}}</ion-label>
+    </ion-item>
+  </div>
+
+  <ion-item id="logout" button lines="none" routerLink="/login">
+    <ion-icon slot="start" class="ion-no-margin" name="exit"></ion-icon>
+    <ion-label class="ion-margin" color="medium">Cerrar sesión</ion-label>
+  </ion-item>
+</ion-card>

@@ -10,6 +10,7 @@ import { CardDataComponent } from './card-data/card-data.component';
 import { CardInfoComponent } from './card-info/card-info.component';
 import { CardTableComponent } from './card-table/card-table.component';
 import { RouterModule } from '@angular/router';
+import { MenuContentComponent } from './menu-content/menu-content.component';
 
 
 
@@ -22,7 +23,8 @@ import { RouterModule } from '@angular/router';
     CardTableComponent,
     HeaderComponent,
     HeaderDashboardComponent,
-    MenuComponent
+    MenuComponent,
+    MenuContentComponent
   ],
   imports: [
     CommonModule,
@@ -37,7 +39,8 @@ import { RouterModule } from '@angular/router';
     CardTableComponent,
     HeaderComponent,
     HeaderDashboardComponent,
-    MenuComponent
+    MenuComponent,
+    MenuContentComponent
   ]
 })
 export class ComponentsModule { }

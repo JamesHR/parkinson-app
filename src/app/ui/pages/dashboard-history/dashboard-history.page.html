@@ -1,58 +1,76 @@
-<div class="container_dashboard-main backgound_color" slot="fixed">
-  <div class="container_dashboard-menu">
-    <app-menu activeOption="Historial"></app-menu>
+<ion-split-pane class="sidebar" when="lg" content-id="main-content">
+  <app-menu-content activeOption="Historial"></app-menu-content>
+
+  <div class="ion-page" id="main-content">
+    <ion-content class="ion-no-padding">
+      <ion-grid fixed>
+        <ion-row>
+          <ion-col size="12">
+            <app-header-dashboard title="Historial"></app-header-dashboard>
+          </ion-col>
+        </ion-row>
+    
+        <ion-row>
+          <ion-col size-sm="12" size-md="8" size-lg="9">
+            <app-card-info
+              icon="pencil"
+              textPrimary="Prueba de mano alzada"
+              textSecondary="30 de Junio de 2022"
+              textTertiary="20220630-001"
+              flag="ESTUDIO MAS RECIENTE"
+            ></app-card-info>
+          </ion-col>
+          <ion-col size-md="4" size-lg="3">
+            <app-card-data
+              icon="search"
+              textPrimary="Buscar estudio"
+            ></app-card-data>
+          </ion-col>
+        </ion-row>
+    
+        <ion-row>
+          <ion-col size-sm="12" size-md="8" size-lg="9">
+            <app-card-graph
+              title="Precisión por ejercicio"
+              filter="20220630-001"
+            ></app-card-graph>
+          </ion-col>
+          <ion-col size-sm="12" size-md="4" size-lg="3">
+            <app-card-graph-small
+              title="Ejercicio analizados"
+              [value1]="5"
+              [value2]="1"
+            ></app-card-graph-small>
+          </ion-col>
+        </ion-row>
+    
+        <ion-row>
+          <ion-col size="12">
+            <app-card-table
+              title="Detalle de los ejercicios"
+              filter="2022"
+              [headers]="[
+                {'size': 2,'value': 'Tipo'},
+                {'size': 7,'value': 'Ejercicio realizado'},
+                {'size': 1,'value': 'Precisión'},
+                {'size': 1,'value': 'Tiempo'},
+                {'size': 1,'value': 'Resultado'},
+              ]"
+              [data]="data"
+              [itemHandler]="tableItemReceptor"
+            ></app-card-table>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-content>
   </div>
-  <div class="container_dashboard-header">
-    <app-header-dashboard title="Historial"></app-header-dashboard>
-  </div>
-  <div class="container_dashboard-info">
-    <app-card-info
-      icon="pencil"
-      textPrimary="Prueba de mano alzada"
-      textSecondary="30 de Junio de 2022"
-      textTertiary="20220630-001"
-      flag="ESTUDIO MAS RECIENTE"
-    ></app-card-info>
-  </div>
-  <div class="container_dashboard-data1">
-    <app-card-data
-      icon="search"
-      textPrimary="Buscar estudio"
-    ></app-card-data>
-  </div>
-  <div class="container_dashboard-graph">
-    <app-card-graph
-      title="Precisión por ejercicio"
-      filter="20220630-001"
-    ></app-card-graph>
-  </div>
-  <div class="container_dashboard-graph_small">
-    <app-card-graph-small
-      title="Ejercicio analizados"
-      [value1]="5"
-      [value2]="1"
-    ></app-card-graph-small>
-  </div>
-  <div class="container_dashboard-table">
-    <app-card-table
-      title="Detalle de los ejercicios"
-      filter="2022"
-      [headers]="[
-        {'size': 2,'value': 'Tipo'},
-        {'size': 7,'value': 'Ejercicio realizado'},
-        {'size': 1,'value': 'Precisión'},
-        {'size': 1,'value': 'Tiempo'},
-        {'size': 1,'value': 'Resultado'},
-      ]"
-      [data]="data"
-      [itemHandler]="tableItemReceptor"
-    ></app-card-table>
-  </div>
-</div>
+</ion-split-pane>
+
+
+<!--------------- MODAL --------------->
 
 <ion-modal [isOpen]="isModalOpen" backdropDismiss="false" mode="ios">
   <ng-template>
-
     <ion-header>
       <ion-toolbar>
         <ion-title>Folio: 20220630-001</ion-title>
@@ -65,30 +83,37 @@
     </ion-header>
 
     <ion-content class="ion-padding">
-      <div class="container_modal">
-        <div class="container_modal_1">
-          <ion-label class="ion-text-center">
-            <h4><strong>PRECISIÓN</strong></h4>
-            <h1>{{itemSelected['Precisión']}}</h1>
-          </ion-label>
-        </div>
-        <div class="container_modal_2">
-          <ion-label class="ion-text-center">
-            <h4><strong>TIEMPO</strong></h4>
-            <h1>{{itemSelected.Tiempo}}</h1>
-          </ion-label>
-        </div>
-        <div class="container_modal_3">
-          <ion-label class="ion-text-center">
-            <h4><strong>CLASIFICACIÓN</strong></h4>
-            <h1>{{itemSelected.Resultado}}</h1>
-          </ion-label>
-        </div>
-        <div class="container_modal_img"></div>
-        <div class="container_modal_name ion-text-center">
+      <ion-grid fixed>
+        <ion-row>
+          <ion-col size="4">
+            <ion-label class="ion-text-center">
+              <h4><strong>PRECISIÓN</strong></h4>
+              <h1>{{itemSelected['Precisión']}}</h1>
+            </ion-label>
+          </ion-col>
+          <ion-col size="4">
+            <ion-label class="ion-text-center">
+              <h4><strong>TIEMPO</strong></h4>
+              <h1>{{itemSelected.Tiempo}}</h1>
+            </ion-label>
+          </ion-col>
+          <ion-col size="4">
+            <ion-label class="ion-text-center">
+              <h4><strong>CLASIFICACIÓN</strong></h4>
+              <h1>{{itemSelected.Resultado}}</h1>
+            </ion-label>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size="12">
+            <div class="container_modal_img"></div>
+          </ion-col>
+        </ion-row>
+        <ion-col size="12" class="ion-text-center">
           <ion-label><h1>{{itemSelected['Ejercicio realizado'] | uppercase}}</h1></ion-label>
-        </div>
-      </div>
+        </ion-col>
+      </ion-grid>
     </ion-content>
 
   </ng-template>
