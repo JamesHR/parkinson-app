@@ -1,11 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-card-table',
-  templateUrl: './card-table.component.html',
-  styleUrls: ['./card-table.component.scss'],
+  selector: 'app-card-list',
+  templateUrl: './card-list.component.html',
+  styleUrls: ['./card-list.component.scss'],
 })
-export class CardTableComponent implements OnInit {
+export class CardListComponent implements OnInit {
 
   @Input() title: string;
   @Input() filter: string;
@@ -16,7 +16,9 @@ export class CardTableComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log('DATA', this.data);
+  }
 
   notImplemented = () => console.log('Method itemHandler not implemented');
 

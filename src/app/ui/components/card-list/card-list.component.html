@@ -1,0 +1,21 @@
+<ion-card mode="ios" class="card_dasboard">
+
+  <ion-item class="ion-no-margin" lines="none">
+    <ion-label><strong>{{title}}</strong></ion-label>
+    <ion-item slot="end" class="ion-no-padding ion-no-margin" lines="none">
+      <ion-item slot="start" lines="none">
+        <ion-input mode="ios"></ion-input>
+        <ion-icon name="search" slot="end" size="small"></ion-icon>
+      </ion-item>
+      <small>{{filter}}</small>
+      <ion-icon *ngIf="!blockFilter" name="chevron-down" slot="end" size="small" class="ion-no-margin"></ion-icon>
+    </ion-item>
+  </ion-item>
+
+  <ion-list>
+    <ion-item *ngFor="let item of data" (click)="(itemHandler) ? itemHandler(data['id']) : notImplemented()" detail>
+      <ion-label>{{item[0]}}</ion-label>
+      <ion-label>{{item[1]}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-card>

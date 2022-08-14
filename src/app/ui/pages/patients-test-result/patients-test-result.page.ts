@@ -4,11 +4,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-dashboard-history',
-  templateUrl: './dashboard-history.page.html',
-  styleUrls: ['./dashboard-history.page.scss'],
+  selector: 'app-patients-test-result',
+  templateUrl: './patients-test-result.page.html',
+  styleUrls: ['./patients-test-result.page.scss'],
 })
-export class DashboardHistoryPage implements OnInit {
+export class PatientsTestResultPage implements OnInit {
 
   data = [
     {'id': 100, 'Tipo': 'Espirales', 'Ejercicio realizado': 'Espiral 100', 'Precisión': '50.01%', 'Tiempo': '0m 52s', 'Resultado': 'Negativo'},
@@ -24,7 +24,8 @@ export class DashboardHistoryPage implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
   setOpenModal = (isOpen: boolean = true) => this.isModalOpen = isOpen;
   setItemSelected = (id: number) => this.itemSelected = this.data.find(item => item.id === id);

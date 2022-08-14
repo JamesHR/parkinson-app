@@ -11,7 +11,7 @@ export class MenuContentComponent implements OnInit {
 
   menu = [
     { icon: 'home', value: 'Inicio', isActive: false, path: '/dashboard-home'},
-    { icon: 'time', value: 'Historial', isActive: false, path: '/dashboard-history'},
+    { icon: 'people', value: 'Pacientes', isActive: false, path: '/patients'},
     { icon: 'settings', value: 'Configuraciones', isActive: false, path: '/dashboard-settings'}
   ];
 

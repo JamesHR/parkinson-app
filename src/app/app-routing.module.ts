@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { PatientsTestHistoryPageModule } from './ui/pages/patients-test-history/patients-test-history.module';
 
 const routes: Routes = [
   {
@@ -9,10 +10,6 @@ const routes: Routes = [
   {
     path: 'dashboard-home',
     loadChildren: () => import('./ui/pages/dashboard-home/dashboard-home.module').then( m => m.DashboardHomePageModule)
-  },
-  {
-    path: 'dashboard-history',
-    loadChildren: () => import('./ui/pages/dashboard-history/dashboard-history.module').then( m => m.DashboardHistoryPageModule)
   },
   {
     path: 'dashboard-settings',
@@ -34,6 +31,18 @@ const routes: Routes = [
     path: '',
     redirectTo: '/login',
     pathMatch: 'full'
+  },
+  {
+    path: 'patients',
+    loadChildren: () => import('./ui/pages/patients/patients.module').then( m => m.PatientsPageModule)
+  },
+  {
+    path: 'patients-test-history',
+    loadChildren: () => import('./ui/pages/patients-test-history/patients-test-history.module').then( m => m.PatientsTestHistoryPageModule)
+  },
+  {
+    path: 'patients-test-result',
+    loadChildren: () => import('./ui/pages/patients-test-result/patients-test-result.module').then( m => m.PatientsTestResultPageModule)
   },
 ];
 

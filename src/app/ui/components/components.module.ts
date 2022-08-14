@@ -11,6 +11,7 @@ import { CardInfoComponent } from './card-info/card-info.component';
 import { CardTableComponent } from './card-table/card-table.component';
 import { RouterModule } from '@angular/router';
 import { MenuContentComponent } from './menu-content/menu-content.component';
+import { CardListComponent } from './card-list/card-list.component';
 
 
 
@@ -20,6 +21,7 @@ import { MenuContentComponent } from './menu-content/menu-content.component';
     CardGraphComponent,
     CardGraphSmallComponent,
     CardInfoComponent,
+    CardListComponent,
     CardTableComponent,
     HeaderComponent,
     HeaderDashboardComponent,
@@ -36,6 +38,7 @@ import { MenuContentComponent } from './menu-content/menu-content.component';
     CardGraphComponent,
     CardGraphSmallComponent,
     CardInfoComponent,
+    CardListComponent,
     CardTableComponent,
     HeaderComponent,
     HeaderDashboardComponent,

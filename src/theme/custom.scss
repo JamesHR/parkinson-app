@@ -34,3 +34,8 @@
     border: 1px solid rgba(0, 0, 0, 0.3);
     border-radius: 4px;
 }
+
+.sidebar {
+    --side-max-width: 100vh;
+    --side-min-width: 10vh;
+  }

@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { DashboardHistoryPageRoutingModule } from './dashboard-history-routing.module';
+import { PatientsTestHistoryPageRoutingModule } from './patients-test-history-routing.module';
 
-import { DashboardHistoryPage } from './dashboard-history.page';
+import { PatientsTestHistoryPage } from './patients-test-history.page';
 import { ComponentsModule } from '../../components/components.module';
 
 @NgModule({
@@ -14,9 +14,9 @@ import { ComponentsModule } from '../../components/components.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    DashboardHistoryPageRoutingModule,
+    PatientsTestHistoryPageRoutingModule,
     ComponentsModule
   ],
-  declarations: [DashboardHistoryPage]
+  declarations: [PatientsTestHistoryPage]
 })
-export class DashboardHistoryPageModule {}
+export class PatientsTestHistoryPageModule {}
