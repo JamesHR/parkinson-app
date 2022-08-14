@@ -1,11 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-card-graph-small',
-  templateUrl: './card-graph-small.component.html',
-  styleUrls: ['./card-graph-small.component.scss'],
+  selector: 'app-card-chart-small',
+  templateUrl: './card-chart-small.component.html',
+  styleUrls: ['./card-chart-small.component.scss'],
 })
-export class CardGraphSmallComponent implements OnInit {
+export class CardChartSmallComponent implements OnInit {
 
   @Input() title: string;
   @Input() value1: number;
