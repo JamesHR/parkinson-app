@@ -6,7 +6,7 @@
       <ion-grid fixed>
         <ion-row>
           <ion-col size="12">
-            <app-header-dashboard title="Historial"></app-header-dashboard>
+            <app-header-dashboard title="Detalles de la prueba"></app-header-dashboard>
           </ion-col>
         </ion-row>
     
@@ -33,13 +33,18 @@
             <app-card-chart
               title="Precisión por ejercicio"
               filter="20220630-001"
+              type="line"
+              [labels]="[001, 002, 003, 004, 005, 006]"
+              [dataset]="[
+                { name:'% de precisión', data:[78.80, 53.22, 47.52, 72.30, 27.12, 50.01], color: '#17bebb'},
+              ]"
             ></app-card-chart>
           </ion-col>
           <ion-col size-sm="12" size-md="4" size-lg="3">
             <app-card-chart-small
-              title="Ejercicio analizados"
-              [value1]="5"
-              [value2]="1"
+              title="Ejercicios analizados"
+              [labels]="['Positivo','Negativo']"
+              [dataset]="[5, 1]"
             ></app-card-chart-small>
           </ion-col>
         </ion-row>

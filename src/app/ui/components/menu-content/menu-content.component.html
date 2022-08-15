@@ -11,7 +11,7 @@
   </ion-button>
 
   <div>
-    <ion-item *ngFor="let item of menu" button lines="none" [routerLink]="item.path">
+    <ion-item *ngFor="let item of menu" button lines="none" [routerLink]="item.path" [replaceUrl]="true">
       <ion-icon [name]="item.icon" slot="start" class="ion-no-margin" [color]="(item.isActive ? 'primary' : 'medium')"></ion-icon>
       <ion-label class="ion-margin" [color]="(item.isActive ? 'primary' : 'medium')">{{item.value}}</ion-label>
     </ion-item>

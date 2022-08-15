@@ -16,9 +16,7 @@ export class CardListComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-    console.log('DATA', this.data);
-  }
+  ngOnInit() {}
 
   notImplemented = () => console.log('Method itemHandler not implemented');
 
