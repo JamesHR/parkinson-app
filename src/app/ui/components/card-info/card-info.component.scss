@@ -12,6 +12,12 @@ ion-icon {
     font-size: 40px;
 }
 
+ion-avatar {
+    margin-right: 16px;
+    height:64px;
+    width: 64px;
+}
+
 .flag{
     background-color: var(--ion-color-warning);
     color: var(--ion-color-dark);

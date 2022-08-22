@@ -13,7 +13,7 @@
         <ion-row>
           <ion-col size-sm="12" size-md="8" size-lg="9">
             <app-card-info
-              icon="pencil"
+              icon="custom-pencil"
               textPrimary="Prueba de mano alzada"
               textSecondary="30 de Junio de 2022"
               textTertiary="20220630-001"
@@ -113,7 +113,7 @@
         <ion-row>
           <ion-col size="12" class="ion-text-center">
             <div class="container_modal_img">
-              <img id="img_test" />
+              <img [id]="itemSelected.Resultado === 'Negativo' ? 'img_test001': 'img_test002'" />
             </div>
           </ion-col>
         </ion-row>

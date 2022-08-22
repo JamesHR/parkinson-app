@@ -13,22 +13,22 @@
         <ion-row>
           <ion-col size-md="12" size-lg="6">
             <app-card-info
-              icon="id-card"
-              textPrimary="Fulanito Perez"
+              [avatar]="gender === 'f' ? 'avatar-patient-woman' : 'avatar-patient-man'"
+              [textPrimary]="patient"
               textSecondary="TecNM Instituto Tecnológico de Orizaba"
               textTertiary="47 años"
             ></app-card-info>
           </ion-col>
           <ion-col size-lg="3">
             <app-card-data
-              icon="layers"
+              icon="custom-clipboard"
               textPrimary="Pruebas realizadas"
               textSecondary="7"
             ></app-card-data>
           </ion-col>
           <ion-col size-lg="3">
             <app-card-data
-              icon="pulse"
+              icon="custom-chart"
               textPrimary="Probabilidad global"
               textSecondary="72%"
             ></app-card-data>

@@ -4,7 +4,8 @@
   </div>
   
   <ion-item lines="none">
-    <ion-icon [name]="icon" slot="start"></ion-icon>
+    <ion-icon *ngIf="icon; else Avatar" slot="start" [name]="icon"></ion-icon>
+
     <ion-label class="ion-text-left">
       <h3><strong>{{textPrimary}}</strong></h3>
       <h6>{{textSecondary}}</h6>
@@ -12,3 +13,10 @@
     </ion-label>
   </ion-item>
 </ion-card>
+
+<ng-template #Avatar>
+  <ion-avatar slot="start">
+    <img [id]="avatar">
+  </ion-avatar>
+</ng-template>
+    

@@ -15,6 +15,11 @@ export class PatientsPage implements OnInit {
   ngOnInit() {
   }
 
-  showPatient = () => this.router.navigate(['/patients-test-history'], {replaceUrl: true});
+  showPatient = (data: string[]) => {
+    this.router.navigate(['/patients-test-history'], {
+      replaceUrl: true,
+      queryParams: {patient: data[0], gender: data[2]}
+    });
+  };
 
 }
