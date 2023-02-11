@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MenuComponent } from './menu/menu.component';
 import { HeaderComponent } from './header/header.component';
@@ -12,6 +12,8 @@ import { MenuContentComponent } from './menu-content/menu-content.component';
 import { CardListComponent } from './card-list/card-list.component';
 import { CardChartComponent } from './card-chart/card-chart.component';
 import { CardChartSmallComponent } from './card-chart-small/card-chart-small.component';
+import { DrawingCanvasComponent } from './drawing-canvas/drawing-canvas.component';
+import { SignaturePadModule } from 'angular2-signaturepad';
 
 
 
@@ -23,6 +25,7 @@ import { CardChartSmallComponent } from './card-chart-small/card-chart-small.com
     CardInfoComponent,
     CardListComponent,
     CardTableComponent,
+    DrawingCanvasComponent,
     HeaderComponent,
     HeaderDashboardComponent,
     MenuComponent,
@@ -31,7 +34,8 @@ import { CardChartSmallComponent } from './card-chart-small/card-chart-small.com
   imports: [
     CommonModule,
     IonicModule,
-    RouterModule
+    RouterModule,
+    SignaturePadModule
   ],
   exports: [
     CardChartComponent,
@@ -40,10 +44,14 @@ import { CardChartSmallComponent } from './card-chart-small/card-chart-small.com
     CardInfoComponent,
     CardListComponent,
     CardTableComponent,
+    DrawingCanvasComponent,
     HeaderComponent,
     HeaderDashboardComponent,
     MenuComponent,
     MenuContentComponent
+  ],
+  schemas: [
+    // CUSTOM_ELEMENTS_SCHEMA
   ]
 })
 export class ComponentsModule { }

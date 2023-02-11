@@ -10,18 +10,20 @@
 			</ion-label>
       <br><br>
 
-      <ion-label>
-        <p><small>[Lienzo {{counter}}]</small></p>
-      </ion-label>
+      <div id="workspace" [ngStyle]="{'background-image': 'url(' + testImg[counter-1] + ')'}">
+        <div id="canvas_container">
+          <app-drawing-canvas [width]=700 [height]=400 (refCounter)="onCounterEmmit($event)" [counter]="counter"></app-drawing-canvas>
+        </div>
+      </div>
       <br><br>
 
-      <ion-fab id="next" vertical="bottom" horizontal="end" slot="fixed" (click)="(counter < 3) ? onIncrement() : onSubmit()">
+      <!-- <ion-fab id="next" vertical="bottom" horizontal="end" slot="fixed" (click)="(counter < 3) ? onIncrement() : onSubmit()">
         <ion-fab-button>
           <ion-icon [name]="(counter < 3) ? 'chevron-forward' : 'checkmark'"></ion-icon>
         </ion-fab-button>
       </ion-fab>
 
-      <ion-fab id="clean" vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab id="clean" vertical="bottom" horizontal="end" slot="fixed" (click)="onClickClean()">
         <ion-fab-button color="light">
           <ion-icon name="trash"></ion-icon>
         </ion-fab-button>
@@ -31,7 +33,7 @@
         <ion-fab-button color="light">
           {{counter}}/3
         </ion-fab-button>
-      </ion-fab>
+      </ion-fab> -->
 
     </div>
     

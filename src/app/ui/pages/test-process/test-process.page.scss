@@ -6,6 +6,8 @@
     border: 1px solid ;
     padding: 48px 48px 64px 48px;
     position: relative;
+
+    
 }
 
 ion-fab {
@@ -22,4 +24,14 @@ ion-fab {
 
 #counter {
     margin-left: 20px;
+}
+
+#canvas_container {
+    display: contents;
+}
+
+#workspace {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 400px, 400px;
 }

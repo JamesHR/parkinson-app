@@ -1,0 +1,22 @@
+<span id="canvas">
+    <signature-pad #signaturePad [options]="signaturePadOptions" (onEndEvent)="drawComplete()"></signature-pad>
+</span>
+
+
+ <ion-fab id="next" vertical="bottom" horizontal="end" slot="fixed" (click)="(counter < 3) ? onIncrement() : onSubmit()">
+    <ion-fab-button>
+        <ion-icon [name]="(counter < 3) ? 'chevron-forward' : 'checkmark'"></ion-icon>
+    </ion-fab-button>
+</ion-fab>
+
+<ion-fab id="clean" vertical="bottom" horizontal="end" slot="fixed" (click)="onClickClean()">
+    <ion-fab-button color="light">
+        <ion-icon name="trash"></ion-icon>
+    </ion-fab-button>
+</ion-fab>
+
+<ion-fab id="counter" vertical="bottom" horizontal="start" slot="fixed">
+    <ion-fab-button color="light">
+        {{counter}}/3
+    </ion-fab-button>
+</ion-fab>

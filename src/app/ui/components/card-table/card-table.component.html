@@ -26,7 +26,15 @@
       <ion-item *ngFor="let data of data" (click)="(itemHandler) ? itemHandler(data['id']) : notImplemented()">
         <ion-grid fixed>
           <ion-row>
-            <ion-col *ngFor="let item of headers" [size]="item.size">{{data[item.value]}}</ion-col>
+            <ion-col *ngFor="let item of headers" [size]="item.size">
+              <span [ngSwitch]="data[item.value]">
+                <ion-label *ngSwitchCase="'Positivo'" color="danger">{{data[item.value]}}</ion-label>
+                <ion-label *ngSwitchCase="'Negativo'" color="success">{{data[item.value]}}</ion-label>
+                <ion-label *ngSwitchCase="'En revisión'" color="warning">{{data[item.value]}}</ion-label>
+                <ion-label *ngSwitchCase="'Finalizada'" color="success">{{data[item.value]}}</ion-label>
+                <ion-label *ngSwitchDefault="">{{data[item.value]}}</ion-label>
+              </span>
+            </ion-col>
           </ion-row>
         </ion-grid>
       </ion-item>
